@@ -65,10 +65,10 @@ Implemented APIs from [CoinPayments API Docs](https://www.coinpayments.net/apido
 | Get Coin Balances | [📚](https://www.coinpayments.net/apidoc-balances) | ✅ | 👍 |
 | Get Deposit Address | [📚](https://www.coinpayments.net/apidoc-get-deposit-address) | ✅ | 👍 |
 | **Receiving Payments** |
-| Create Transaction | [📚](https://www.coinpayments.net/apidoc-create-transaction) | ❌ | 👍 |
-| Callback Addresses | [📚](https://www.coinpayments.net/apidoc-get-callback-address) | ❌ | 👍 |
-| Get TX Info  | [📚](https://www.coinpayments.net/apidoc-get-tx-info) | ❌ | 👍 |
-| Get TX List  | [📚](https://www.coinpayments.net/apidoc-get-tx-ids) | ❌ | 👍 |
+| Create Transaction | [📚](https://www.coinpayments.net/apidoc-create-transaction) | ✅ | 👍 |
+| Callback Addresses | [📚](https://www.coinpayments.net/apidoc-get-callback-address) | ✅ | 👍 |
+| Get TX Info  | [📚](https://www.coinpayments.net/apidoc-get-tx-info) | ✅ | 👍 |
+| Get TX List  | [📚](https://www.coinpayments.net/apidoc-get-tx-ids) | ✅ | 👍 |
 | **Withdrawals/Transfers** |
 | Create Transfer | [📚](https://www.coinpayments.net/apidoc-create-transfer) | ❌ | 👌 |
 | Create Withdrawal / Mass Withdrawal | [📚](https://www.coinpayments.net/apidoc-create-withdrawal) | ❌ | 👌 |
