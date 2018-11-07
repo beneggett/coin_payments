@@ -32,7 +32,10 @@ Implemented APIs from [CoinPayments API Docs](https://www.coinpayments.net/apido
 | API |  Docs | Implemented? | Priority |
 | --- | --- | --- | --- |
 | Informational Commands |
-| Get Basic Account Info | [📚](https://www.coinpayments.net/apidoc-get-basic-info) | | 👍 |
+| Get Basic Account Info | [📚](https://www.coinpayments.net/apidoc-get-basic-info) | ✅ | 👍 |
+| Get Exchange Rates / Supported Coins | [📚](https://www.coinpayments.net/apidoc-rates) | ✅ | 👍 |
+| Get Coin Balances | [📚](https://www.coinpayments.net/apidoc-balances) | ✅ | 👍 |
+| Get Deposit Address | [📚](https://www.coinpayments.net/apidoc-get-deposit-address) | ✅ | 👍 |
 
 ## Development
 

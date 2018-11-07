@@ -11,7 +11,50 @@ module CoinPayments
       # handle_response(response, api_type)
     end
 
+    ## INFORMATIONAL_COMMANDS
 
+    # CoinPayments::Api.new.get_basic_account_info
+    def get_basic_account_info
+      response = post cmd: "get_basic_info"
+    end
+
+    # CoinPayments::Api.new.get_exchange_rates
+    # CoinPayments::Api.new.get_exchange_rates accepted: true
+    # CoinPayments::Api.new.get_exchange_rates accepted: true, accepted_only: true
+    def get_exchange_rates(options = {})
+      body = {
+        cmd: "rates"
+      }
+      body[:short] = 1 if options[:short]
+      body[:accepted] = 1 if options[:accepted]
+      response = post body
+      if options[:accepted_only]
+        rates = response["result"]
+        rates.delete_if { |_k, v| v["accepted"] == 0 }
+      else
+        response["result"]
+      end
+    end
+
+    # CoinPayments::Api.new.get_coin_balances
+    # CoinPayments::Api.new.get_coin_balances all: true
+    def get_coin_balances(options = {})
+      body = {
+        cmd: "balances"
+      }
+      body[:all] = 1 if options[:all]
+      response = post body
+    end
+
+
+    # CoinPayments::Api.new.get_deposit_address
+    def get_deposit_address(currency = "BTC")
+      body = {
+        cmd: "get_deposit_address",
+        currency: currency
+      }
+      response = post body
+    end
 
     private
 
