@@ -70,7 +70,7 @@ Implemented APIs from [CoinPayments API Docs](https://www.coinpayments.net/apido
 | Get TX Info  | [📚](https://www.coinpayments.net/apidoc-get-tx-info) | ✅ | 👍 |
 | Get TX List  | [📚](https://www.coinpayments.net/apidoc-get-tx-ids) | ✅ | 👍 |
 | **Withdrawals/Transfers** |
-| Create Transfer | [📚](https://www.coinpayments.net/apidoc-create-transfer) | ❌ | 👌 |
+| Create Transfer | [📚](https://www.coinpayments.net/apidoc-create-transfer) | ✅ | 👌 |
 | Create Withdrawal / Mass Withdrawal | [📚](https://www.coinpayments.net/apidoc-create-withdrawal) | ❌ | 👌 |
 | Convert Coins | [📚](https://www.coinpayments.net/apidoc-convert) | ❌ | 👌 |
 | Conversion Limits | [📚](https://www.coinpayments.net/apidoc-convert-limits) | ❌ | 👌 |

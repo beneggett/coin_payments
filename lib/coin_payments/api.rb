@@ -142,44 +142,77 @@ module CoinPayments
 
     ### Withdrawals/Transfers
     ## Create Transfer
-    # CoinPayments::Api.new.create_transfer
-    def create_transfer
+    # CoinPayments::Api.new.create_transfer amount: 0.005, currency: "BTC", merchant: "1bf1c996fd6781bd4aabec78dda6250d"
+    def create_transfer(options = {})
+      required_params = %i( amount currency)
+      required_params_present = required_params.all? { |e| options.keys.include?(e) }
+      raise "Required Argument Error. Must include #{required_params.join(', ')}" unless required_params_present
+      mutually_exclusive_params = %i( merchant pbntag)
+      mutually_exclusive_params_present = mutually_exclusive_params.any? { |e| options.keys.include?(e) }
+      raise "Required Argument Error. Must include one of #{mutually_exclusive_params.join(', ')}" unless required_params_present
+      body = {
+        cmd: "create_transfer",
+        amount: options[:amount],
+        currency: options[:currency],
+      }
+      body[:merchant] = options[:merchant] if options[:merchant]
+      body[:pbntag] = options[:pbntag] if options[:pbntag]
+      body[:auto_confirm] = 1 if options[:auto_confirm]
+      post body
 
     end
 
     ## Create Withdrawal / Mass Withdrawal
     # CoinPayments::Api.new.create_withdrawal
     def create_withdrawal
+      # body = {
+      #   cmd: "create_withdrawal"
+      # }
 
     end
 
     ## Convert Coins
     # CoinPayments::Api.new.convert_coins
     def convert_coins
+      # body = {
+      #   cmd: "convert_coins"
+      # }
 
     end
 
     ## Conversion Limits
     # CoinPayments::Api.new.conversion_limits
     def conversion_limits
+      # body = {
+      #   cmd: "conversion_limits"
+      # }
 
     end
 
     ## Get Withdrawal History
     # CoinPayments::Api.new.get_withdrawal_history
     def get_withdrawal_history
+      # body = {
+      #   cmd: "get_withdrawal_history"
+      # }
 
     end
 
     ## Get Withdrawal Info
     # CoinPayments::Api.new.get_withdrawal_info
     def get_withdrawal_info
+      # body = {
+      #   cmd: "get_withdrawal_info"
+      # }
 
     end
 
     ## Get Conversion Info
     # CoinPayments::Api.new.get_conversion_info
     def get_conversion_info
+      # body = {
+      #   cmd: "get_conversion_info"
+      # }
 
     end
 
@@ -188,24 +221,36 @@ module CoinPayments
     ## Get Profile Information
     # CoinPayments::Api.new.get_profile_information
     def get_profile_information
+      # body = {
+      #   cmd: "get_profile_information"
+      # }
 
     end
 
     ## Get Tag List
     # CoinPayments::Api.new.get_tag_list
     def get_tag_list
+      # body = {
+      #   cmd: "get_tag_list"
+      # }
 
     end
 
     ## Update Tag Profile
     # CoinPayments::Api.new.update_tag_profile
     def update_tag_profile
+      # body = {
+      #   cmd: "update_tag_profile"
+      # }
 
     end
 
     ## Claim Tag
     # CoinPayments::Api.new.claim_tag
     def claim_tag
+      # body = {
+      #   cmd: "claim_tag"
+      # }
 
     end
 

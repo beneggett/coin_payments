@@ -8,5 +8,4 @@ require "coin_payments/version"
 
 
 module CoinPayments
-  # Your code goes here...
 end
